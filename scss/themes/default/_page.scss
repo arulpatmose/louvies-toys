@@ -1,0 +1,295 @@
+#homepage-1 {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    .ps-home-banner {
+        padding-top: 15px;
+        margin-bottom: 30px;
+
+        .ps-collection {
+            display: block;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .slick-slider {
+            height: 100%;
+         
+
+            .slick-list {
+                height: 100%;
+
+                >.slick-track {
+                    height: 100%;
+
+                    * {
+                        height: 96.8%;
+                        width: 100%;
+                        border-radius: 5px;
+
+                        @include media('<sm') {
+                            height: 100%;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+
+            .slick-dots{
+                position: absolute;
+                left: 8%;
+                bottom: 20%;
+                width: unset;
+
+                @include media('<sm') {
+                    bottom: 10%;
+                }
+
+            }
+
+            .ps-banner-item--default {
+                display: block;
+            }
+        }
+
+        @include media('<sm') {
+            .ps-container {
+                padding: 0;
+            }
+
+            .slick-slider {
+                height: 50vh;
+
+                .slick-list {
+                    height: 100%;
+
+                    >.slick-track {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .banner-overlay {
+            padding: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* height: 20vh !important; */
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.5);
+            flex-direction: column;
+            color: black;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+
+        .ps-container {
+            display: flex;
+            height: 500px;
+
+            >* {
+                flex: 1;
+                flex-basis: 100%;
+            }
+
+            .ps-section__left {
+                max-width: calc(100% - 83%);
+                padding-right: 15px;
+
+                .menu__content {
+                    height: 100%;
+
+                    .menu {
+                        height: inherit;
+
+                        .menu--dropdown {
+                            height: calc(100% - 40px) !important;
+                            overflow-y: auto;
+                        }
+                    }
+                }
+
+
+            }
+
+            .ps-section__right {
+                max-width: 83%;
+            }
+
+            @media (max-width: 1680px) {
+                // .ps-section__left {
+                //     max-width: calc(100% - 800px);
+                // }
+
+                // .ps-section__right {
+                //     max-width: 85;
+                // }
+            }
+
+            @media (max-width: 1440px) {
+                // .ps-section__left {
+                //     max-width: calc(100% - 875px);
+                // }
+
+                // .ps-section__right {
+                //     max-width: 875px;
+                // }
+            }
+
+            @media (max-width: 768px) {
+
+                /* Tablet */
+                .ps-section__left {
+                    max-width: 100%;
+                }
+
+                .ps-section__right {
+                    max-width: 100%;
+                }
+            }
+
+            @media (max-width: 480px) {
+
+                /* Mobile */
+                .ps-section__left,
+                .nav-bar {
+                    display: none;
+                }
+
+                .ps-section__right {
+                    max-width: 100%;
+                }
+            }
+
+            .ps-section__right .nav-bar {
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+
+                li {
+                    float: left;
+                }
+
+                li a {
+                    display: block;
+                    color: rgb(0, 0, 0);
+                    text-align: center;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    margin-bottom: 12px;
+                }
+
+                li a:hover {
+                    background-color: $color-1st;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+
+    .ps-site-features {
+
+        // padding-bottom: 90px;
+        @media screen and (max-width: 480px) {}
+    }
+
+    .ps-deal-of-day {
+        padding-bottom: 80px;
+
+        .slick-slide {
+            >div {
+                margin: 0 8px;
+            }
+        }
+
+        .ps-product {
+            .ps-product__price {
+                color: #690;
+                font-size: 18px;
+                font-weight: 600;
+
+                del {
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+
+                small {
+                    margin-left: 10px;
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .ps-top-categories {
+        padding: 80px 0 50px;
+
+        h3 {
+            text-transform: capitalize;
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+            font-family: 'Prompt', sans-serif !important;
+        }
+
+        .ps-container{
+            margin-top: 50px;
+        }
+    }
+
+    @include media('<md') {
+        .ps-top-categories {
+            padding: 0 50px;
+        }
+    }
+    @include media('<sm') {
+        .ps-top-categories {
+            padding: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .ps-product-list {
+        padding-bottom: 80px;
+
+        @include media('<md') {
+            padding-bottom: 50px;
+        }
+
+        @include media('<sm') {
+            padding-bottom: 40px;
+        }
+    }
+
+    .ps-download-app {
+        margin-top: 80px;
+        margin-bottom: 100px;
+
+        @include media('<sm') {
+            margin-bottom: 50px;
+        }
+    }
+
+    .ps-carousel {
+        .slick-list {
+            padding-right: 3px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #homepage-1 {
+        padding: 0;
+    }
+}
